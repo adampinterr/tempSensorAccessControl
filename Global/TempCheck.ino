@@ -18,5 +18,7 @@ void tempCheck(){
   avgTemp = allTemp / 10;
   Serial.print(" | avgTemp:");
   Serial.println(avgTemp);
+  postData = postVariable + avgTemp;
+  email();
   delay(500);
 }
