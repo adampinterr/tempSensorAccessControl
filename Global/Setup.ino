@@ -1,5 +1,6 @@
 void setup() {
   pinMode(2, INPUT);
+  pinMode(PIR_SIGNAL, INPUT);
   Serial.begin(9600);
   analogReadResolution(10);
   SPI.begin();

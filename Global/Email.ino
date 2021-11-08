@@ -19,8 +19,5 @@ if (temperature >= 18){
 
   delay(2000);
 }
-
-  Serial.println(postData);
-
-  delay(3000);
+  //delay(3000);
 }

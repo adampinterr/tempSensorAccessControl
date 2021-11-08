@@ -1,6 +1,6 @@
 void tempCheck(){
   
-  sensorValue = analogRead(sensorPin); 
+  sensorValue = analogRead(TEMPSENSOR); 
   voltage = sensorValue * (3300/1024); // in milliVolt 
   Serial.print(" voltage = "); 
   Serial.print(voltage); 
@@ -20,5 +20,7 @@ void tempCheck(){
   Serial.println(avgTemp);
   postData = postVariable + avgTemp;
   email();
+  avgTemp=0;
+  allTemp=0;
   delay(500);
 }
