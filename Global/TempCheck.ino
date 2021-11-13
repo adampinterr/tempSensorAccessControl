@@ -9,7 +9,8 @@ void tempCheck(){
   Serial.print(" temperature(C) = "); 
   Serial.print(temperature);
   Serial.print("  ");
-
+  avgTemp=0;
+  allTemp=0;
   for(int i = 0; i<10; i++)
   {
         allTemp = allTemp + temperature;
@@ -20,7 +21,6 @@ void tempCheck(){
   Serial.println(avgTemp);
   postData = postVariable + avgTemp;
   email();
-  avgTemp=0;
-  allTemp=0;
+
   delay(500);
 }

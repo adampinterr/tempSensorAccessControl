@@ -10,5 +10,6 @@ void nfcRead() {
   array_to_string(mfrc522.uid.uidByte, 4, ID);
   tempCheck();
   printCardUid();
+  lcdprintID();
   mfrc522.PICC_HaltA();
 }
