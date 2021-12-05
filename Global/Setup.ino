@@ -27,4 +27,5 @@ void setup() {
   }
   Serial.println("Connected to wifi");
   printWifiStatus();
+  lcd.begin(16, 2); 
 }
