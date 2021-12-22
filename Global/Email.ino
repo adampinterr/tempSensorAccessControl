@@ -1,5 +1,4 @@
 void email() {
-if (temperature > 18){
   // Function send a secure email via Gmail     
   Serial.println("Attempting to connect to GMAIL server");
   if (client.connect(_GMailServer, 465) == 1) {
@@ -44,5 +43,4 @@ if (temperature > 18){
    
   client.stop();
   Serial.println(F("Disconnected"));
-  }
 }

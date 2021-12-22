@@ -18,6 +18,7 @@ float avgTemp;
 float allTemp = 0;
 int status = WL_IDLE_STATUS;
 
+char DBserv[]="x.x.x.x" // find out the IP address of your computer and put it here 
 char server[] = "www.adampinterr.hu";
 String postData;
 String postVariable = "temp=";

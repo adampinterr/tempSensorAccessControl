@@ -15,12 +15,15 @@ void tempCheck(){
   {
         allTemp = allTemp + temperature;
         delay(500);
+        temperature = (voltage - 500 ) / 10;
   }
   avgTemp = allTemp / 10;
   Serial.print(" | avgTemp:");
   Serial.println(avgTemp);
   postData = postVariable + avgTemp;
-  email();
-
+  if (avgTemp > 18){
+    email();
+    sendtoDB();
+  }
   delay(500);
 }

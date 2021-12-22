@@ -1,6 +1,6 @@
 void loop() {
   if(digitalRead(PIR_SIGNAL)==HIGH){
-    Serial.println("Mozgas eszlelve");
+    Serial.println("--Mozgas eszlelve");
     getCard();
     }
   else{
