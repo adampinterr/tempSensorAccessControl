@@ -1,8 +1,9 @@
 #include <SPI.h>
 #include <MFRC522.h>
-#include "secret.h" //contains the SSID and password to the wireless network, needed for sending data to database and sending alert emails
 #include <WiFi101.h> //directory for connecting the arduino to wireless networks
 #include <LiquidCrystal.h>
+
+#include "secret.h" //contains the SSID and password to the wireless network, needed for sending data to database and sending alert emails
 #include "emailinfo.h" //contains the information needed for the email alerts via Gmail
 #define SS_PIN 11 /* Slave Select pin, maps to SDA */
 #define RST_PIN 7 /* RST pin*/
@@ -18,8 +19,5 @@ float avgTemp;
 float allTemp = 0;
 int status = WL_IDLE_STATUS;
 
-char DBserv[]="x.x.x.x" // find out the IP address of your computer and put it here 
-char server[] = "www.adampinterr.hu";
-String postData;
-String postVariable = "temp=";
+char DBserv[]="192.168.130.142"; // find out the IP address of your computer and put it here 
 WiFiClient client;

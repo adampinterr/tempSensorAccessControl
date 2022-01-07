@@ -1,5 +1,4 @@
 <?php
-
     $dbusername = "arduino";
     $dbpassword = "zsepi32";
     $server = "localhost";
@@ -14,7 +13,7 @@
 		echo($_GET['ID']);
 		$sql = "INSERT INTO tempsensoraccesscontrol.temperature (cardID,temperature) VALUES ('".$_GET['ID']."','".$_GET['temp']."')";
 		mysqli_query($dbconnect,$sql);
+		
 	}
-    mysqli_close($dbconnect);
-	
+	mysqli_close($dbconnect);
 ?>

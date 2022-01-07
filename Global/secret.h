@@ -2,8 +2,8 @@
 #define PASSWORD "avrj3144"
 
 /*
-#define DBuser arduino
-#define DBpass zsepi32
 #define mySSID "adampinterr"
 #define PASSWORD "QtyA0192"
+#define DBuser "arduino"
+#define DBpass "zsepi32"
 */

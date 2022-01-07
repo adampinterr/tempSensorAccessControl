@@ -7,23 +7,28 @@ header("Refresh: 5; URL=$url");  // Refresh the webpage every 5 seconds
     <title>Temperature Sensor</title>
 </head>
     <body>
+	<div style="margin:auto; width:50%; padding: 10px; text-align: center;">
         <h1>Temperature sensor readings</h1>
-    <table border="0" cellspacing="0" cellpadding="4">
+	<table border="3" cellspacing="1" cellpadding="5" style="margin:auto;">
       <tr>
-            <td>cardID</td>
-            <td>temperature</td>
-            <td>time</td>
+            <td><b>cardID</b></td>
+			<td><b>Name</b></td>
+            <td><b>Temperature</b></td>
+            <td><b>Time</b></td>
       </tr>
-      
+      </div>
 <?php
     $con=mysqli_connect("localhost","arduino","zsepi32","tempsensoraccesscontrol");
          
-    $result = mysqli_query($con,'SELECT * FROM temperature');
+    $result = mysqli_query($con,'SELECT t.cardID, u.Name, t.temperature, t.time 
+								 FROM temperature t, users u 
+								 WHERE t.cardID=u.cardID');
 
     while($row = mysqli_fetch_array($result))
     {      
         echo "<tr>";
         echo "<td>" . $row['cardID'] . "</td>";
+		echo "<td>" . $row['Name'] . "</td>";
         echo "<td>" . $row['temperature'] . "</td>";
         echo "<td>" . $row['time'] . "</td>";
         echo "</tr>";

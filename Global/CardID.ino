@@ -1,14 +1,3 @@
-void printCardUid() {
-  
-  Serial.print("Card ID: ");
-  for (int i = 0; i < mfrc522.uid.size; ++i) {
-
-    Serial.print(mfrc522.uid.uidByte[i], HEX);
-    Serial.print(" ");
-  }
-  Serial.println();
-}
-
 void array_to_string(byte array[], unsigned int len, char buffer[])
 {
    for (unsigned int i = 0; i < len; i++)

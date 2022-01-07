@@ -22,8 +22,8 @@ void setup() {
     Serial.println(mySSID);
     //Connect to WPA/WPA2 network.Change this line if using open/WEP network
     status = WiFi.begin(mySSID,PASSWORD);
-    // wait 10 seconds for connection:
-    delay(10000);
+    // wait 5 seconds for connection:
+    delay(5000);
   }
   Serial.println("Connected to wifi");
   printWifiStatus();

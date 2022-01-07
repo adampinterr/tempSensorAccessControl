@@ -18,12 +18,8 @@ void tempCheck(){
         temperature = (voltage - 500 ) / 10;
   }
   avgTemp = allTemp / 10;
+  lcdprintCels();
   Serial.print(" | avgTemp:");
   Serial.println(avgTemp);
-  postData = postVariable + avgTemp;
-  if (avgTemp > 18){
-    email();
-    sendtoDB();
-  }
   delay(500);
 }

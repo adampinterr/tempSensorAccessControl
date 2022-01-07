@@ -6,18 +6,24 @@ void getCard()
   lcd.print("az olvasohoz!");
   nfcRead();
 }
-void lcdprintID()
+void lcdprintID(char ID[])
 {
   lcd.clear();
   lcd.setCursor(0,0);
- for (int i = 0; i < mfrc522.uid.size; ++i) {
-
-    lcd.print(mfrc522.uid.uidByte[i], HEX);
-    lcd.print(" ");
-  }
+  lcd.print("ID: ");
+  lcd.print(ID);
+  lcd.setCursor(0,1);
+  lcd.print("Homeres");
+}
+void lcdprintCels()
+{
   lcd.setCursor(0,1);
   lcd.print(avgTemp);
   lcd.setCursor(5,1);
-  lcd.print("Celsius");
+  lcd.print(" Celsius");
   delay(5000);
+}
+void lcdClear()
+{
+  lcd.clear();
 }

@@ -5,6 +5,7 @@ void loop() {
     }
   else{
     Serial.println("-- Nincs mozgas");
+    lcdClear();
     }
     delay(1000);
 }
