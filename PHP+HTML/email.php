@@ -29,8 +29,8 @@ if(isset($_GET['ID'])){
 		$mail->SMTPSecure = PHPMailer::ENCRYPTION_STARTTLS;
 		$mail->Port = 587;
 
-		$mail->Username = 'tempSensorAccessControl@gmail.com'; // YOUR gmail email
-		$mail->Password = 'soS3cr3t31'; // YOUR gmail password
+		$mail->Username = '-----@-----.---'; // YOUR gmail email
+		$mail->Password = '-----'; // YOUR gmail password
 
 		// Sender and recipient settings
 		$mail->setFrom('tempSensorAccessControl@gmail.com','Arduino TempCheck');
