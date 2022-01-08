@@ -1,5 +1,5 @@
 void tempCheck(){
-  
+  lcdTempchk();
   sensorValue = analogRead(TEMPSENSOR); 
   voltage = sensorValue * (3300/1024); // in milliVolt 
   Serial.print(" voltage = "); 

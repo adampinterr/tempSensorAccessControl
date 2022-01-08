@@ -11,10 +11,23 @@ void nfcRead() {
   Serial.print("Card ID: ");
   Serial.println(ID);
   lcdprintID(ID);
-  tempCheck();
-  if (avgTemp > 18){
-    email(ID);
+  IDcheck(ID);
+  if(data=='T')
+  {
+    tempCheck();
+    if (avgTemp > THRES){
+      email(ID);
+    }
+    sendtoDB(ID);
   }
-  sendtoDB(ID);
+  else if(data=='F')
+  {
+    lcdWrongCard();
+  }
+  else
+  {
+    Serial.println("Wrong cardcheck, please fix");
+  }
   mfrc522.PICC_HaltA();
+  digitalWrite(LED, HIGH);
 }

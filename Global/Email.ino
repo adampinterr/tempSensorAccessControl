@@ -11,7 +11,7 @@ void email(char ID[]) {
     client.println("Connection: close");
     client.println(); // Empty line
     client.stop();    // Closing connection to server
-
+    Serial.println("--> E-mail sent\n");
   }
   else {
     Serial.println("--> connection failed\n");

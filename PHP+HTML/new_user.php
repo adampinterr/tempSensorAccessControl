@@ -1,5 +1,6 @@
 <?php
-  $ID=$name=$email="";
+
+  $ID=$name=$email=NULL;
   if(isset($_POST["cardID"])&&isset($_POST["name"])&& isset($_POST["email"]))
   {
 	echo "ID:", $_POST["cardID"],"<br>";
@@ -13,4 +14,6 @@
   $sql = "INSERT INTO tempsensoraccesscontrol.users (cardID,Name,Email) VALUES ('".$ID."','".$name."','".$email."')";
   mysqli_query($con,$sql);
   mysqli_close($con);
+  $url="Registry.html";
+  header("Refresh: 5; URL=$url");
 ?>

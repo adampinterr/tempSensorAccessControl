@@ -15,6 +15,7 @@ void sendtoDB(char ID[])
     client.println("Connection: close");
     client.println(); // Empty line
     client.stop();    // Closing connection to server
+    Serial.println("--> Data written\n");
 
   }
   else {

@@ -6,7 +6,7 @@ header("Refresh: 5; URL=$url");  // Refresh the webpage every 5 seconds
 <head>
     <title>Temperature Sensor</title>
 </head>
-    <body>
+    <body style="background-color:#000000; color:#FFFFFF">
 	<div style="margin:auto; width:50%; padding: 10px; text-align: center;">
         <h1>Temperature sensor readings</h1>
 	<table border="3" cellspacing="1" cellpadding="5" style="margin:auto;">
