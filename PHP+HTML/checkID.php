@@ -1,6 +1,6 @@
 <?php
 
-$con=mysqli_connect("localhost","arduino","zsepi32","tempsensoraccesscontrol");
+$con=mysqli_connect("localhost","username","password","tempsensoraccesscontrol");
 if(isset($_GET['ID'])){
 	$getid="SELECT cardID, Name FROM users WHERE cardID='".$_GET['ID']."'";
 	$res= mysqli_query($con,$getid);

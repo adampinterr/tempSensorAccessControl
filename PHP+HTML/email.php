@@ -6,7 +6,7 @@ use PHPMailer\PHPMailer\Exception;
 require_once __DIR__ . '/phpmailer/src/Exception.php';
 require_once __DIR__ . '/phpmailer/src/PHPMailer.php';
 require_once __DIR__ . '/phpmailer/src/SMTP.php';
-$con=mysqli_connect("localhost","arduino","zsepi32","tempsensoraccesscontrol");
+$con=mysqli_connect("localhost","username","password","tempsensoraccesscontrol");
 header('Content-type: text/plain; charset=utf-8');
 if(isset($_GET['ID'])){
 	$getthings="SELECT Email, Name FROM users WHERE cardID='".$_GET['ID']."'";
@@ -29,13 +29,12 @@ if(isset($_GET['ID'])){
 		$mail1->SMTPSecure = PHPMailer::ENCRYPTION_STARTTLS;
 		$mail1->Port = 587;
 
-		$mail1->Username = '**********@gmail.com'; // YOUR gmail address
-		$mail1->Password = '*********'; // YOUR gmail password
+		$mail1->Username = 'example@gmail.com'; // YOUR gmail
+		$mail1->Password = '********'; // YOUR gmail password
 
 		// Sender and recipient settings
-		$mail1->setFrom('tempSensorAccessControl@gmail.com','Arduino TempCheck');
+		$mail1->setFrom('example@gmail.com','Somebody');
 		$mail1->addAddress($email,$name);
-		//$mail->addReplyTo('tempSensorAccessControl@gmail.com'); // to set the reply to
 
 		// Setting the email content
 		$mail1->IsHTML(true);
@@ -58,13 +57,12 @@ if(isset($_GET['ID'])){
 		$mail->SMTPSecure = PHPMailer::ENCRYPTION_STARTTLS;
 		$mail->Port = 587;
 
-		$mail->Username = '************@gmail.com'; 
-		$mail->Password = '**********'; 
+		$mail->Username = 'example@gmail.com'; // YOUR gmail
+		$mail->Password = '********'; // YOUR gmail password
 
 		// Sender and recipient settings
-		$mail->setFrom('tempSensorAccessControl@gmail.com','Arduino TempCheck');
-		$mail->addAddress("retnipadam@gmail.com","Pintér Ádám");
-		//$mail->addReplyTo('tempSensorAccessControl@gmail.com'); // to set the reply to
+		$mail->setFrom('example@gmail.com','Somebody');
+		$mail->addAddress("someones@gmail.com","Someone");
 
 		// Setting the email content
 		$mail->IsHTML(true);

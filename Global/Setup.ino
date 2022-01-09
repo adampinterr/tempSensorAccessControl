@@ -28,4 +28,5 @@ void setup() {
   Serial.println("Connected to wifi");
   printWifiStatus();
   lcd.begin(16, 2); 
+  lcd.createChar(0, Degree);
 }

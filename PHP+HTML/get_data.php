@@ -18,7 +18,7 @@ header("Refresh: 5; URL=$url");  // Refresh the webpage every 5 seconds
       </tr>
       </div>
 <?php
-    $con=mysqli_connect("localhost","arduino","zsepi32","tempsensoraccesscontrol");
+    $con=mysqli_connect("localhost","username","password","tempsensoraccesscontrol");
          
     $result = mysqli_query($con,'SELECT t.cardID, u.Name, t.temperature, t.time 
 								 FROM temperature t, users u 
@@ -29,7 +29,7 @@ header("Refresh: 5; URL=$url");  // Refresh the webpage every 5 seconds
         echo "<tr>";
         echo "<td>" . $row['cardID'] . "</td>";
 		echo "<td>" . $row['Name'] . "</td>";
-        echo "<td>" . $row['temperature'] . "</td>";
+        echo "<td>" . $row['temperature'] . " °C</td>";
         echo "<td>" . $row['time'] . "</td>";
         echo "</tr>";
         

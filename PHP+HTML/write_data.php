@@ -1,6 +1,6 @@
 <?php
-    $dbusername = "arduino";
-    $dbpassword = "zsepi32";
+    $dbusername = "username";
+    $dbpassword = "password";
     $server = "localhost";
 	$datab = "tempsensoraccesscontrol";
 	

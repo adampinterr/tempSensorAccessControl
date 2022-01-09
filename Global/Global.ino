@@ -9,6 +9,16 @@
 #define PIR_SIGNAL 6
 
 LiquidCrystal lcd(0, 1, 2, 3, 4, 5);
+byte Degree[] = {
+  0b00010,
+  0b00101,
+  0b00010,
+  0b00000,
+  0b00000,
+  0b00000,
+  0b00000,
+  0b00000
+};//Custom °character
 MFRC522 mfrc522(SS_PIN, RST_PIN);
 //IPAddress ip (192,168,130,107);
 int TEMPSENSOR = A0; // select the input pin for the tempsensor 
